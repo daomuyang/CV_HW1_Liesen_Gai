@@ -22,6 +22,7 @@ pip install numpy matplotlib scikit-learn tensorflow
 | `main.py` | 完整实验代码，含数据加载、模型实现、训练、超参搜索、可视化全流程 |
 | `train.py`| 展示训练过程，含数据加载、模型实现、训练、超参搜索，同时对Loss/Accuracy曲线以及第一层隐藏层权重矩阵进行了可视化|
 | `test.py`| 展示测试过程，含数据加载、模型定义、测试，同时对混淆矩阵和几个分类错误案例进行了可视化|
+| `hw1盖烈森23307130013.pdf` | 报告文件 |
 | `hw1盖烈森23307130013.ipynb` | 实验notebook版本，可不看 |
 | `README.md` | 项目说明文档 |
 | `final_best_model.pkl` | 最优模型权重文件 |
