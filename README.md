@@ -42,7 +42,8 @@ pip install numpy matplotlib tqdm scikit-learn tensorflow
 | `hw1盖烈森23307130013.pdf` | 报告文件 |
 | `hw1盖烈森23307130013.ipynb` | 实验notebook版本，可不看 |
 | `README.md` | 项目说明文档 |
-| `final_best_model.pkl` | 最优模型权重文件 |
+| `final_best_model.pkl` | 使用训练集+验证集全量数据训练后的最终最优模型权重（最终的测试使用的是这个） |
+| `val_best_model.pkl` | 基于验证集准确率保存的最优模型权重 |
 | `training_curve.png` | 训练Loss/准确率曲线图片 |
 | `confusion_matrix.png` | 测试集混淆矩阵图片 |
 | `weight_visualization.png` | 第一层隐藏层权重可视化结果图片 |
