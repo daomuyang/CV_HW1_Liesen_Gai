@@ -11,13 +11,21 @@
 ## 二、环境依赖
 
 Python 3.x
+
 numpy >= 1.21.0
+
 matplotlib >= 3.4.0
+
 tqdm >= 4.62.0
+
 scikit-learn >= 1.0.0
+
 tensorflow >= 2.8.0 (仅用于加载Fashion-MNIST数据集)
+
 pickle 
+
 warnings 
+
 os 
 
 ```bash
