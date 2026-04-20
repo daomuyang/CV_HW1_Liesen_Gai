@@ -38,17 +38,23 @@ pip install numpy matplotlib tqdm scikit-learn tensorflow
 ## 三、仓库文件说明
 | 文件名 | 功能说明 |
 |--------|----------|
-| `main.py` | 完整实验代码，含数据加载、模型实现、训练、超参搜索、可视化全流程 |
-| `hw1盖烈森23307130013.pdf` | 报告文件 |
-| `hw1盖烈森23307130013.ipynb` | 实验notebook版本，可不看 |
-| `README.md` | 项目说明文档 |
-| `final_best_model.pkl` | 使用训练集+验证集全量数据训练后的最终最优模型权重（最终的测试使用的是这个） |
-| `val_best_model.pkl` | 基于验证集准确率保存的最优模型权重 |
-| `training_curve.png` | 训练Loss/准确率曲线图片 |
-| `confusion_matrix.png` | 测试集混淆矩阵图片 |
-| `weight_visualization.png` | 第一层隐藏层权重可视化结果图片 |
-| `error_analysis.png` | 错分样本可视化分析 |
-| `dataset/` | 数据集存放目录 |
+| `main.py` | 主程序入口，整合所有模块，一键完成数据加载、超参数搜索、模型训练、测试评估与全流程可视化 |
+| `utils.py` | 通用工具函数库，包含激活函数、损失函数、数值稳定Softmax、余弦退火学习率调度等核心工具 |
+| `data_loader.py` | Fashion-MNIST数据集加载与预处理模块，自动完成数据归一化与训练集/验证集划分 |
+| `models.py` | 三层全连接神经网络（ThreeLayerMLP）定义，包含手动实现的前向传播、反向传播与权重加载逻辑 |
+| `optimizers.py` | 带动量的SGD随机梯度下降优化器实现 |
+| `trainer.py` | 训练核心模块，包含批量训练循环、梯度裁剪、早停机制、模型保存与超参数网格搜索 |
+| `visualization.py` | 实验可视化模块，包含训练曲线、混淆矩阵、权重可视化、错例分析等所有绘图功能 |
+| `final_best_model.pkl` | 使用训练集+验证集全量数据训练后的最终模型权重（用于最终测试集评估） |
+| `val_best_model.pkl` | 基于验证集准确率筛选保存的最优模型权重（带早停机制） |
+| `training_curve.png` | 训练过程中训练集与验证集的Loss曲线和Accuracy曲线 |
+| `confusion_matrix.png` | 最终模型在测试集上的分类混淆矩阵 |
+| `weight_visualization_all.png` | 第一层隐藏层全部神经元权重重塑为28×28灰度图的可视化结果 |
+| `error_analysis.png` | 测试集随机错分样本的真实标签与预测标签对比分析 |
+| `hw1盖烈森23307130013.pdf` | 正式实验报告，包含实验原理、实现细节与结果分析 |
+| `hw1盖烈森23307130013.ipynb` | 实验Jupyter Notebook版本（可选参考） |
+| `README.md` | 项目说明文档，包含环境依赖、运行方式与仓库文件说明 |
+| `dataset/` | 数据集存放目录（如本地无数据，代码将自动通过TensorFlow下载） |
 
 ---
 
